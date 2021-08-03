@@ -45,9 +45,15 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>hi</h2>
-							<p>I'm otis, a full stack developer looking for<br />
-							new opportunities and things to learn.</p><br>
+							<h1>
+								hi, I'm otis! <br>
+							</h1>
+							<br>
+							<h1>
+								I'm <a href="" class="typewrite" data-period="2000" data-type='[ "a full-stack developer.", "always learning.", "a huge nerd.", "a problem solver.", "always looking to collab!" ]'></a>
+							<hr>
+							</h1>
+
 							<ul class="icons">
 								<li><a href="https://github.com/gtfotis" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 								<li><a href="https://www.linkedin.com/in/otiswilcox/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -77,7 +83,7 @@
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
-									<iframe width="640" height="360" src="https://www.youtube.com/embed/9BRoirDUx64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe id='ytvideo' width="600" height="350" src="https://www.youtube.com/embed/9BRoirDUx64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
 							</div>
 						</div>
@@ -86,15 +92,23 @@
 				</section>
 			<!-- project 1 -->
 				<section id="project1" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/disney.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2><a href='https://mouseguide.net' target='_blank'>Mouse Guide</h2></a>
 						</header>
-						<p>what is mouseguide here</p>
-						<p>technologies utilized</p>
+						<p>Mouse Guide is our solution to making Disney trip planning easy. After creating an account, users can pick from four different parks and add activities, lodging, and dining for each corresponding park and add it to their itinerary. Users can also easily delete selections from their itinerary.
+						</p>
+						<p>Personal Contribution</p>
 						<img src='images/walk_disney.gif' width="350px">
-						<p>personal contribution here</p>
+						<p> Tech Utilized:</p>
+						<p class='tech'>
+							<img src='./images/js-icon.png' width='30px'></img> 
+							<img src='./images/node-icon.png' width='30px'></img>
+							<img src='./images/html-icon.png' width='30px'></img>
+							<img src='./images/css-icon.png' width='30px'></img>
+							<img src='./images/postgresql-icon.svg' width='30px'></img>
+						</p>
 						<ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
@@ -104,15 +118,22 @@
 
 			<!-- project 2 -->
 				<section id="project2" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<span class="image fit main bottom"><img src="images/pokemon.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2><a href='https://alyssadicarlo.github.io/pokespace/' target='_blank'>PokéSpace</h2></a>
 						</header>
 						<p>what is pokespace here?</p>
-						<p>technologies utilized here</p>
+						<p>Personal Contribution here</p>
 						<img src='images/pokespace.gif' width='330px'>
-						<p>personal contribution here</p>
+						<p> Tech Utilized:</p>
+						<p class='tech'>
+							<img src='./images/js-icon.png' width='30px'></img>
+							<img src='./images/node-icon.png' width='30px'></img>
+							<img src='./images/html-icon.png' width='30px'></img>
+							<img src='./images/css-icon.png' width='30px'></img>
+							<img src='./images/postgresql-icon.svg' width='30px'></img>
+						</p>
 						<ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
@@ -121,7 +142,7 @@
 				</section>
 			<!-- Four -->
 			<section id="project3" class="spotlight style2 right">
-				<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+				<span class="image fit main"><img src="images/nemesis.jpg" alt="" /></span>
 				<div class="content">
 					<header>
 						<h2><a href='https://github.com/david-vasek/python_game_project-' target='_blank'>Spelling Nemesis</h2></a>
@@ -129,7 +150,14 @@
 					<p>What is Spelling Nemesis here</p>
 					<p>Technologies utilized here</p>
 					<img src='images/spellingnemesis.gif' width='375'>
-					<p>personal contribution here</p>
+					<p> Tech Utilized:</p>
+					<p class='tech'>
+						<img src='./images/js-icon.png' width='30px'></img> 
+						<img src='./images/node-icon.png' width='30px'></img> 
+						<img src='./images/html-icon.png' width='30px'></img>
+						<img src='./images/css-icon.png' width='30px'></img>
+						<img src='./images/postgresql-icon.svg' width='30px'></img>
+					</p>
 					<ul class="actions">
 						<li><a href="#" class="button">Learn More</a></li>
 					</ul>
@@ -144,14 +172,14 @@
 					</header>
 					<div class="box alt">
 						<div class="row gtr-uniform">
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<span><img src='images/js-icon.png' width='100px'></span>
+							<section id='shortcut' class="col-4 col-6-medium col-12-xsmall">
+								<span><img src='images/js-icon.png' width='90px'></span>
 							</section>
 							<section class="col-4 col-6-medium col-12-xsmall">
-								<span><img src='images/html-icon.png' width='100px'></span>
+								<span><img src='images/html-icon.png' width='90px'></span>
 							</section>
 							<section class="col-4 col-6-medium col-12-xsmall">
-								<span><img src='images/css-icon.png' width='100px'></span>
+								<span><img src='images/css-icon.png' width='90px'></span>
 							</section>
 							<section class="col-4 col-6-medium col-12-xsmall">
 								<span><img src='images/node-icon.png' width='100px'></span>
@@ -173,68 +201,12 @@
 							</section>
 						</div>
 					</div>
-					<footer class="major">
-						<ul class="actions special">
-							<li><a href="#" class="button">Back to the top!</a></li>
-						</ul>
-					</footer>
 				</div>
 			</section>
-			<!-- contact form -->
-				<section id="contact" class="wrapper style1 special fade">
-					<form method="post" action="mailto:otiscodes@gmail.com">
-						<div><h3>Feel free to shoot me an email!</h3></div>
-						<div class="row gtr-uniform gtr-50">
-							<div class="col-6 col-12-xsmall">
-								<input type="text" name="name" id="name" value="" placeholder="Name" />
-							</div>
-							<div class="col-6 col-12-xsmall">
-								<input type="email" name="email" id="email" value="" placeholder="Email" />
-							</div>
-							<div class="col-12">
-								<select name="category" id="category">
-									<option value="">- Category -</option>
-									<option value="1">Business Inquiry</option>
-									<option value="1">Collaboration</option>
-									<option value="1">General Inquiry</option>
-									<option value="1">Common Interests!</option>
-								</select>
-							</div>
-							<div class="col-4 col-12-medium">
-								<input type="radio" id="priority-low" name="priority" checked>
-								<label for="priority-low">Low Priority</label>
-							</div>
-							<div class="col-4 col-12-medium">
-								<input type="radio" id="priority-normal" name="priority">
-								<label for="priority-normal">Normal Priority</label>
-							</div>
-							<div class="col-4 col-12-medium">
-								<input type="radio" id="priority-high" name="priority">
-								<label for="priority-high">High Priority</label>
-							</div>
-							<div class="col-6 col-12-medium">
-								<input type="checkbox" id="copy" name="copy">
-								<label for="copy">Email me a copy of this message</label>
-							</div>
-							<div class="col-6 col-12-medium">
-								<input type="checkbox" id="human" name="human">
-								<label for="human">I am a human and not a robot</label>
-							</div>
-							<div class="col-12">
-								<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-							</div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="primary" /></li>
-									<li><input type="reset" value="Reset" /></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</section>
 
 			<!-- Footer -->
 				<footer id="footer">
+					<p>Let's keep in touch :)</p>
 					<ul class="icons">
 						<li><a href="https://github.com/gtfotis" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 						<li><a href="https://www.linkedin.com/in/otiswilcox/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -245,7 +217,7 @@
 
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; otis | codes</li><li>All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
 
@@ -260,6 +232,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/typewriter.js"></script>
 
 	</body>
 </html>
