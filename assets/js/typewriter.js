@@ -4,8 +4,8 @@ var TxtType = function(el, toRotate, period) {
     this.loopNum = 0;
     this.period = parseInt(period, 10) || 2000;
     this.txt = '';
-    this.tick();
     this.isDeleting = false;
+    this.tick();
 };
 
 TxtType.prototype.tick = function() {
@@ -39,7 +39,7 @@ TxtType.prototype.tick = function() {
     }, delta);
 };
 
-window.onload = function() {
+window.addEventListener('load', function() {
     var elements = document.getElementsByClassName('typewrite');
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
@@ -53,4 +53,4 @@ window.onload = function() {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
-};
+});
