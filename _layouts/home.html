@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ page.title }}</title>
+	<meta name="description" content="Otis Wilcox is a software engineer at JPMorganChase. Previously front-end lead on Risk Factor at First Street.">
+	<link rel="canonical" href="{{ page.url | absolute_url }}">
+	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:description" content="Software engineer at JPMorganChase. Previously front-end lead on Risk Factor at First Street.">
+	<meta property="og:url" content="{{ page.url | absolute_url }}">
+	<meta property="og:image" content="{{ '/images/facepic02.jpg' | absolute_url }}">
+	<meta name="color-scheme" content="light dark">
+	<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+	<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+	<script src="{{ '/assets/site.js' | relative_url }}" defer></script>
+</head>
+<body data-section="{{ page.section }}">
+	<a class="skip" href="#home">Skip to content</a>
+	<div class="shell">
+		<header class="side">
+			<div class="side-top">
+				<a class="name" href="{{ '/' | relative_url }}" data-nav="home">Otis Wilcox</a>
+				<p class="tagline">Software engineer. Front-end at heart.</p>
+			</div>
+			<nav aria-label="Sections">
+				<ol class="nav">
+					<li><a href="{{ '/' | relative_url }}" data-nav="home"><span>00</span>Index</a></li>
+					<li><a href="{{ '/work/' | relative_url }}" data-nav="work"><span>01</span>Work</a></li>
+					<li><a href="{{ '/projects/' | relative_url }}" data-nav="projects"><span>02</span>Projects</a></li>
+					<li><a href="{{ '/about/' | relative_url }}" data-nav="about"><span>03</span>About</a></li>
+					<li><a href="{{ '/contact/' | relative_url }}" data-nav="contact"><span>04</span>Contact</a></li>
+				</ol>
+			</nav>
+			<ul class="side-links">
+				<li><a href="https://github.com/gtfotis">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/otiswilcox/">LinkedIn</a></li>
+				<li><a href="mailto:otiscodes@gmail.com">Email</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<section id="home" data-title="Otis Wilcox · Software Engineer" class="intro">
+				<p class="lede">I'm Otis, a software engineer at <em>JPMorganChase</em>. Before that I spent four and a half years at <em>First Street</em>, where I grew from junior front-end engineer to leading the front end of Risk Factor, their consumer climate-risk product.</p>
+				<dl class="facts">
+					<div><dt>Now</dt><dd>Software Engineer III, JPMorganChase</dd></div>
+					<div><dt>Before</dt><dd>First Street, 2021–2026</dd></div>
+					<div><dt>Mostly</dt><dd>React, Next.js, TypeScript, Tailwind</dd></div>
+					<div><dt>Based</dt><dd>Georgia, USA</dd></div>
+				</dl>
+			</section>
+
+			<section id="work" data-title="Work · Otis Wilcox">
+				<h2 class="label"><span>01</span>Work</h2>
+
+				<article class="company">
+					<header class="company-head">
+						<h3>JPMorganChase</h3>
+						<p>Buckhead, Atlanta · On-site</p>
+					</header>
+					<div class="role">
+						<p class="when">Jan 2026 – Now</p>
+						<div>
+							<h4>Software Engineer III</h4>
+						</div>
+					</div>
+				</article>
+
+				<article class="company">
+					<header class="company-head">
+						<h3>First Street</h3>
+						<p>Fayetteville, Georgia · 4 yrs 5 mos</p>
+					</header>
+					<div class="role">
+						<p class="when">Jan 2024 – Jan 2026</p>
+						<div>
+							<h4>Senior Software Engineer</h4>
+							<ul>
+								<li>Lead front-end engineer for the consumer side of Risk Factor.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="role">
+						<p class="when">Jul 2022 – Jan 2024</p>
+						<div>
+							<h4>Software Engineer</h4>
+							<ul>
+								<li>Led front-end development and implementation of Heat Factor.</li>
+								<li>Project owner for front-end work on new perils.</li>
+								<li>Shipped features across Risk Factor.</li>
+								<li>Onboarded and mentored junior engineers.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="role">
+						<p class="when">Sep 2021 – Jul 2022</p>
+						<div>
+							<h4>Junior Front-End Engineer</h4>
+							<ul>
+								<li>Shipped updates and bug fixes on FloodFactor.com.</li>
+								<li>Built React components for a new product launch, querying the CMS through GraphQL.</li>
+								<li>Created custom CMS fields in PHP.</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</section>
+
+			<section id="projects" data-title="Projects · Otis Wilcox">
+				<h2 class="label"><span>02</span>Projects</h2>
+				<p class="section-note">Team projects from 2021, built while I was learning to code.</p>
+
+				<article class="project">
+					<div class="project-text">
+						<p class="index">P/01</p>
+						<h3>Mouse Guide</h3>
+						<p>Pick one of four Disney parks and build an itinerary of activities, lodging, and dining, then trim it as plans change. I seeded the database for every park's options, ran the GitHub repo, and handled HTML and CSS throughout.</p>
+						<p class="stack">JavaScript · Node.js · PostgreSQL · HTML · CSS</p>
+						<p class="links"><a href="https://mouseguide.net">Visit site ↗</a><a href="https://github.com/gtfotis/walk_disney">Code ↗</a></p>
+					</div>
+					<figure>
+						<img src="{{ '/images/walk_disney.gif' | relative_url }}" width="600" height="303" loading="lazy" alt="Mouse Guide: building a park itinerary">
+					</figure>
+				</article>
+
+				<article class="project">
+					<div class="project-text">
+						<p class="index">P/02</p>
+						<h3>PokéSpace</h3>
+						<p>A MySpace-style take on the Pokédex: search any Pokémon and get the details that matter for gameplay. I built the in-browser Game Boy Advance emulator, the About page, and much of the HTML and CSS.</p>
+						<p class="stack">JavaScript · Bulma · HTML · CSS</p>
+						<p class="links"><a href="https://alyssadicarlo.github.io/pokespace/">Visit site ↗</a><a href="https://github.com/alyssadicarlo/pokespace">Code ↗</a></p>
+					</div>
+					<figure>
+						<img src="{{ '/images/pokespace.gif' | relative_url }}" width="478" height="268" loading="lazy" alt="PokéSpace: searching for a Pokémon">
+					</figure>
+				</article>
+
+				<article class="project">
+					<div class="project-text">
+						<p class="index">P/03</p>
+						<h3>Spelling Nemesis</h3>
+						<p>An RPG where your grasp of English has been shattered, and you have to relearn a few key letters to survive. I designed and implemented the sound, made graphics, and wired up the game's flow.</p>
+						<p class="stack">Python · Pygame</p>
+						<p class="links"><a href="https://github.com/david-vasek/python_game_project-">Code ↗</a></p>
+					</div>
+					<figure>
+						<img src="{{ '/images/spellingnemesis.gif' | relative_url }}" width="480" height="418" loading="lazy" alt="Spelling Nemesis gameplay">
+					</figure>
+				</article>
+			</section>
+
+			<section id="about" data-title="About · Otis Wilcox">
+				<h2 class="label"><span>03</span>About</h2>
+				<div class="about">
+					<img class="portrait" src="{{ '/images/facepic02.jpg' | relative_url }}" width="1124" height="1122" loading="lazy" alt="Otis Wilcox">
+					<div>
+						<p>I came into engineering through a coding bootcamp in 2021 and have been building for the web ever since, mostly on the front end.</p>
+						<p>Outside work I play (too many) video games, exercise, and now and then make videos, like the week I spent in <a href="https://www.youtube.com/watch?v=9BRoirDUx64">VRChat for Disrupt</a>.</p>
+					</div>
+				</div>
+				<dl class="toolkit">
+					<div><dt>Languages</dt><dd>TypeScript, JavaScript, HTML, CSS, Python, PHP</dd></div>
+					<div><dt>Front end</dt><dd>React, Next.js, Tailwind CSS, GraphQL</dd></div>
+					<div><dt>Back end</dt><dd>Node.js, Express, PostgreSQL</dd></div>
+					<div><dt>Tools</dt><dd>Git, AWS</dd></div>
+				</dl>
+			</section>
+
+			<section id="contact" data-title="Contact · Otis Wilcox">
+				<h2 class="label"><span>04</span>Contact</h2>
+				<p class="contact-line">Always up for a good collab or a chat about front-end work.</p>
+				<p class="contact-mail"><a href="mailto:otiscodes@gmail.com">otiscodes@gmail.com</a></p>
+				<ul class="contact-links">
+					<li><a href="https://github.com/gtfotis">GitHub ↗</a></li>
+					<li><a href="https://www.linkedin.com/in/otiswilcox/">LinkedIn ↗</a></li>
+					<li><a href="https://www.instagram.com/gtfotis/">Instagram ↗</a></li>
+					<li><a href="https://x.com/gtfotis">X ↗</a></li>
+				</ul>
+				<footer class="colophon">© 2026 Otis Wilcox · Set in Newsreader and IBM Plex</footer>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
