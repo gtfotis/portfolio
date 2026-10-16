@@ -24,7 +24,7 @@
 		if (id !== current) {
 			current = id;
 			links.forEach(function (a) {
-				if (a.dataset.nav === id && !a.classList.contains('name')) a.setAttribute('aria-current', 'page');
+				if (a.dataset.nav === id && a.closest('.nav')) a.setAttribute('aria-current', 'page');
 				else a.removeAttribute('aria-current');
 			});
 			document.title = document.getElementById(id).dataset.title;
