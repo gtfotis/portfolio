@@ -69,6 +69,7 @@ permalink: /meso-meter/
 		.btn:hover { filter: brightness(1.06); }
 		.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--orange-lo); }
 		.btn.alt { background: linear-gradient(#7a8cff, #5865f2); box-shadow: 0 3px 0 #3a43a8; }
+		.btn.soon { background: #b9ab92; box-shadow: 0 3px 0 #8a7c64; cursor: default; filter: none; transform: none; }
 		.actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
 		.fine { font-size: .9rem; color: var(--muted); margin: .7rem 0 0; }
 
@@ -116,11 +117,13 @@ permalink: /meso-meter/
 		<p class="lede">Is that 60% actually cheap or is this guy dreaming? Hover anything in an FM shop and see what it's really been going for on Kania.</p>
 
 		<div class="actions">
-			<a class="btn" href="https://github.com/gtfotis/meso-meter-releases/releases/latest/download/MesoMeter-win-Setup.exe">⬇ Download for Windows</a>
+			<!-- Placeholder until the first release; then restore:
+			<a class="btn" href="https://github.com/gtfotis/meso-meter-releases/releases/latest/download/MesoMeter-win-Setup.exe">⬇ Download for Windows</a> -->
+			<span class="btn soon" aria-disabled="true">Download coming soon</span>
 			<a class="btn alt" id="discord" href="https://discord.com/users/109028731586097152" target="_blank" rel="noopener">Request an invite on Discord</a>
 			<span class="toast" id="toast" role="status"></span>
 		</div>
-		<p class="fine">You'll need an invite key to use it. Message <strong>otis</strong> on Discord to get one.</p>
+		<p class="fine">The download is almost ready. You'll need an invite key to use it, so message <strong>otis</strong> on Discord to get on the list.</p>
 
 		<div class="shot">
 			<img src="/images/meso-meter/market.webp" width="1366" height="470" alt="A MapleStory Classic player shop full of scrolls, open in the Free Market">
