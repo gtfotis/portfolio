@@ -1,0 +1,186 @@
+---
+permalink: /meso-meter/
+---
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Meso Meter</title>
+	<meta name="description" content="A Free Market price checker for MapleStory Classic World. Friends-only beta.">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<style>
+		:root {
+			--sky-top: #7cc4f4;
+			--sky-mid: #cfeeff;
+			--sky-low: #fff4d6;
+			--ink: #2a1d10;
+			--muted: #6b5a44;
+			--card: #fffdf5;
+			--card-line: #e8c98a;
+			--orange: #ff8c00;
+			--orange-hi: #ffb347;
+			--orange-lo: #b35f00;
+			--title-shadow: #c66a00;
+			--good: #7ee2a0;
+			--tip-bg: rgba(20, 24, 32, 0.9);
+			--tip-ink: #e0e0e0;
+		}
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--sky-top: #0f1d33;
+				--sky-mid: #18304d;
+				--sky-low: #2a2433;
+				--ink: #f3ead9;
+				--muted: #c2b49c;
+				--card: #1f2533;
+				--card-line: #5a4a2c;
+				--title-shadow: #7a3f00;
+			}
+		}
+
+		*, *::before, *::after { box-sizing: border-box; }
+		html { -webkit-text-size-adjust: 100%; }
+		body {
+			margin: 0;
+			color: var(--ink);
+			background: var(--sky-low) linear-gradient(var(--sky-top), var(--sky-mid) 420px, var(--sky-low) 1100px) no-repeat;
+			font: 400 1.0625rem/1.6 "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+		}
+		a { color: inherit; }
+		.wrap { max-width: 60rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+
+		.badge {
+			display: inline-block; background: var(--orange); color: #fff; font-weight: 700; font-size: .8rem;
+			letter-spacing: .06em; padding: .2rem .7rem; border-radius: 999px; border: 2px solid #fff;
+		}
+		h1 {
+			font-size: clamp(2.4rem, 7vw, 3.6rem); line-height: 1.05; margin: .6rem 0 .5rem; color: #fff;
+			text-shadow: 0 3px 0 var(--title-shadow), 0 5px 12px rgba(0, 0, 0, .25);
+		}
+		.lede { font-size: 1.2rem; max-width: 38rem; margin: 0 0 1.5rem; }
+
+		.btn {
+			display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; cursor: pointer;
+			background: linear-gradient(var(--orange-hi), var(--orange)); color: #fff; font: inherit; font-weight: 700;
+			padding: .7rem 1.3rem; border-radius: 10px; border: 2px solid #fff; box-shadow: 0 3px 0 var(--orange-lo);
+		}
+		.btn:hover { filter: brightness(1.06); }
+		.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--orange-lo); }
+		.btn.alt { background: linear-gradient(#7a8cff, #5865f2); box-shadow: 0 3px 0 #3a43a8; }
+		.actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+		.fine { font-size: .9rem; color: var(--muted); margin: .7rem 0 0; }
+
+		.shot {
+			position: relative; margin: 2rem 0 .5rem; border-radius: 12px; overflow: hidden;
+			border: 3px solid #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+		}
+		.shot img { display: block; width: 100%; height: auto; }
+		.tip {
+			position: absolute; left: 46.5%; top: 52%; max-width: 16rem; background: var(--tip-bg); color: var(--tip-ink);
+			border-radius: 3px; padding: .4rem .55rem; font: 600 clamp(.55rem, 1.1vw, .8rem)/1.35 "Segoe UI", system-ui, sans-serif;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+		}
+		.tip .good { color: var(--good); }
+		.tip span { display: block; font-weight: 400; }
+		.caption { font-size: .85rem; color: var(--muted); margin: 0 0 2.5rem; }
+
+		h2 { font-size: 1.6rem; margin: 2.5rem 0 1rem; }
+		.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; }
+		.card {
+			background: var(--card); border: 2px solid var(--card-line); border-radius: 12px; padding: 1rem 1.1rem;
+		}
+		.card h3 { margin: 0 0 .3rem; font-size: 1.1rem; }
+		.card p { margin: 0; font-size: .97rem; }
+
+		.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+		.pair figure { margin: 0; }
+		.pair img { width: 100%; height: auto; border-radius: 10px; border: 3px solid #fff; display: block; }
+		.pair figcaption { font-size: .85rem; color: var(--muted); margin-top: .4rem; }
+
+		ol.steps { padding-left: 1.3rem; }
+		ol.steps li { margin: .4rem 0; }
+		code { background: var(--card); border: 1px solid var(--card-line); border-radius: 4px; padding: 0 .3rem; }
+
+		.beta { background: var(--card); border: 2px dashed var(--orange); border-radius: 12px; padding: 1rem 1.2rem; }
+		.beta p { margin: .4rem 0; }
+		footer { margin-top: 3rem; font-size: .85rem; color: var(--muted); }
+		.toast { margin-left: .2rem; font-size: .9rem; color: var(--muted); }
+	</style>
+</head>
+<body>
+	<main class="wrap">
+		<span class="badge">BETA · FRIENDS ONLY</span>
+		<h1>Meso Meter</h1>
+		<p class="lede">Is that 60% actually cheap or is this guy dreaming? Hover anything in an FM shop and see what it's really been going for on Kania.</p>
+
+		<div class="actions">
+			<a class="btn" href="https://github.com/gtfotis/meso-meter-releases/releases/latest/download/MesoMeter-win-Setup.exe">⬇ Download for Windows</a>
+			<a class="btn alt" id="discord" href="https://discord.com/users/109028731586097152" target="_blank" rel="noopener">Request an invite on Discord</a>
+			<span class="toast" id="toast" role="status"></span>
+		</div>
+		<p class="fine">You'll need an invite key to use it. Message <strong>otis</strong> on Discord to get one.</p>
+
+		<div class="shot">
+			<img src="/images/meso-meter/market.webp" width="1366" height="470" alt="A MapleStory Classic player shop full of scrolls, open in the Free Market">
+			<div class="tip" aria-hidden="true"><b class="good">Good deal · 24% under</b><span>Usually 38,000 · 9 sales</span><span>Last sold 3h ago</span><span>4 listed now · cheapest 28,999</span></div>
+		</div>
+		<p class="caption">Illustration of the price tooltip next to a shop row. The numbers are examples.</p>
+
+		<h2>What it does</h2>
+		<div class="grid">
+			<div class="card"><h3>Hover, don't guess</h3><p>Mouse over an item and a little box tells you if it's a steal, fair, or a rip-off, going off what it's actually sold for. Not what someone listed it at.</p></div>
+			<div class="card"><h3>Just shop like normal</h3><p>Open shops and scroll like you always do. It reads the rows for you. No typing item names into a site with your character standing there AFK.</p></div>
+			<div class="card"><h3>Everyone's browsing counts</h3><p>Every shop any of us opens goes into the same price history. More of us in the FM means fresher prices for all of us.</p></div>
+			<div class="card"><h3>Won't make stuff up</h3><p>If it's only seen one sale, it tells you that. It'd rather say "not sure" than talk you into a bad buy.</p></div>
+			<div class="card"><h3>Pricing your own shop</h3><p>Setting up your shop? It shows what each item moves fast at, what's normal, and what you can get if you're patient. Stop underpricing your 60%s.</p></div>
+			<div class="card"><h3>Won't get you banned</h3><p>It only looks at your screen, like OBS does. It never touches the game, never reads its memory, never clicks anything for you.</p></div>
+		</div>
+
+		<div class="pair">
+			<figure><img src="/images/meso-meter/scrolls.webp" width="400" height="420" alt="A scroll shop with the game's own item tooltip showing Earring LUK Scroll: Intermediate" loading="lazy"><figcaption>Scrolls, equips, ores, pots. If it's in a shop, it counts.</figcaption></figure>
+			<figure><img src="/images/meso-meter/ores.webp" width="490" height="420" alt="A shop selling ores, screws and a shield" loading="lazy"><figcaption>Grey sold-out rows count as sales, so prices are what people actually paid.</figcaption></figure>
+		</div>
+
+		<h2>Why we made it</h2>
+		<p>Everyone's been there: you buy something for 500k, walk two rooms over and it's sitting at 200k. The only way to know prices is to camp the FM for days and remember everything. Price sites help a bit, but they only update when someone happens to open shops on stream, so half the time they're stale or missing. We're clicking through shops all day anyway, so this just remembers it for us and shares it with the group.</p>
+
+		<h2>Getting started</h2>
+		<ol class="steps">
+			<li>Message <strong>otis</strong> on Discord for an invite key.</li>
+			<li>Download and run <code>MesoMeter-win-Setup.exe</code>. Windows may say "Windows protected your PC" because the app isn't code-signed yet: click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+			<li>Meso Meter starts in the system tray (the orange M near the clock). Paste your invite key in the Settings window and save.</li>
+			<li>Go shopping. Prices pop up when you hover stuff. It updates itself, so you never have to redownload.</li>
+		</ol>
+
+		<div class="beta">
+			<p><strong>Heads up, it's a beta.</strong> It's just a few of us on Kania for now, so plenty of items will say "No sales seen yet" until we've all browsed around a bit. If a price looks way off, ping otis. That's the stuff we most want to know about.</p>
+			<p>Windows only. Play MapleStory Classic World <strong>windowed at 1366×768</strong>; other sizes aren't read yet.</p>
+		</div>
+
+		<footer>
+			<p>Item names from ohmi69's <a href="https://ohmi69.github.io/osms_datamine_dashboard/">OSMS Data Explorer</a>. MapleStory is a trademark of Nexon; Meso Meter is an unofficial fan project, not affiliated with Nexon.</p>
+			<p>Made by <a href="/">Otis Wilcox</a>.</p>
+		</footer>
+	</main>
+	<script>
+		(function () {
+			var btn = document.getElementById("discord");
+			var toast = document.getElementById("toast");
+			// The link opens otis's Discord profile; the username is copied too, in case the profile doesn't open.
+			btn.addEventListener("click", function () {
+				function done(msg) { toast.textContent = msg; }
+				try {
+					navigator.clipboard.writeText("otis").then(
+						function () { done("Copied “otis” in case Discord asks for a username."); },
+						function () { done("On Discord, the username is “otis”."); }
+					);
+				} catch (e) {
+					done("On Discord, the username is “otis”.");
+				}
+			});
+		})();
+	</script>
+</body>
+</html>
